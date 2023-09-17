@@ -4,15 +4,18 @@
     <div class="purple-team">
       <div class="result-bar">
         <span>Victorious</span>
-        <span @click="editPurpleScore" class="score" v-if="!editingPurpleScore">{{ purpleScore }}</span>
-        <input
-          v-else
-          v-model="purpleScore"
-          type="number"
-          @keydown.enter="editingPurpleScore = false"
-          @blur="editingPurpleScore = false"
-          class="score-input"
-        />
+        <div class="purple-score">
+          <img src="../assets/question-ico.png">
+          <span @click="editPurpleScore" class="score" v-if="!editingPurpleScore">{{ purpleScore }}</span>
+          <input
+            v-else
+            v-model="purpleScore"
+            type="number"
+            @keydown.enter="editingPurpleScore = false"
+            @blur="editingPurpleScore = false"
+            class="score-input"
+          />
+        </div>
       </div>
       <div class="player-list">
         <div class="status-caption">Dmg. Dealt Dmg. Taken <b>Recovery</b></div>
@@ -48,7 +51,7 @@
                     width="50"
                     height="50"
                   />
-                  <select v-model="player.selectedPokemon" @change="changePokemon(player)" v-if="player.isSelectOpen" class="select-pokemon" autofocus>
+                  <select v-model="player.selectedPokemon" @change="changePokemon(player)" v-if="player.isSelectOpen" class="select-pokemon">
                     <option v-for="pokemon in availablePokemon" :key="pokemon.name" :value="pokemon.name">
                       {{ pokemon.name }}
                     </option>

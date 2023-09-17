@@ -317,6 +317,12 @@ button {
 .score:hover {
   opacity: .6;
 }
+.purple-score {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
 
 button:hover {
   background-color: #522e8f;
