@@ -614,7 +614,4 @@ export default {
   margin: 15px auto;
   font-family: 'PT Sans';
 }
-.buttons-image {
-  position: absolute;
-}
 </style>
