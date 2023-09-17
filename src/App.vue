@@ -10,12 +10,5 @@ inject();
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-     <Home></Home>
-    </div>
-  </header>
-
-  <main>
-  </main>
+  <Home></Home>
 </template>
