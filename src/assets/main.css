@@ -39,11 +39,12 @@ body {
 
 .player-name {
   color: #EFE2FF;
-  font-size: 19.5px;
-  font-family: 'PT Sans';
-  letter-spacing: 0;
-  margin-left: 6px;
-  line-height: 56px;
+  font-size: 16px;
+  font-family: "a-otf-ud-shin-maru-go-pr6n", sans-serif;
+  font-weight: 600;
+  letter-spacing: .2px;
+  margin-left: 4px;
+  line-height: normal;
 }
 
 .last-item .player-name {
@@ -203,15 +204,6 @@ body {
   z-index: 0;
 }
 
-.player-name {
-  color: #fff;
-  font-size: 19.5px;
-  font-family: 'PT Sans';
-  font-weight: 400;
-  letter-spacing: .02px;
-  margin-left: 6px;
-  line-height: 56px;
-}
 .player-name:hover {
   opacity: .6;
 }
@@ -239,19 +231,19 @@ body {
 .box-level {
   z-index: 1;
   position: absolute;
-  margin-left: 40px;
-  margin-top: 37px;
+  margin-left: 39px;
+  margin-top: 34.45px;
   display: flex;
   width: 15px;
   height: 15px;
-  padding: 1px 2px;
+  padding: 1px 1px;
   flex-direction: column;
   align-items: center;
   text-align: center;
   border-radius: 5px;
   background: #000201;
   color: #FFF;
-  font-size: 12.397px;
+  font-size: 11px;
   font-family: "Exo 2";
   font-weight: 800;
   letter-spacing: -.05px;
