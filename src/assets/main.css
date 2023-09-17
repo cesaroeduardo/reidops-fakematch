@@ -256,6 +256,9 @@ body {
   font-weight: 800;
   letter-spacing: -.05px;
 }
+.box-level:hover {
+  opacity: .6;
+}
 
 
 /* MODAL */
