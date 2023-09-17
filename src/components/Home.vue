@@ -48,7 +48,7 @@
                     width="50"
                     height="50"
                   />
-                  <select v-model="player.selectedPokemon" @change="changePokemon(player)" v-if="player.isSelectOpen" class="select-pokemon">
+                  <select v-model="player.selectedPokemon" @change="changePokemon(player)" v-if="player.isSelectOpen" class="select-pokemon" autofocus>
                     <option v-for="pokemon in availablePokemon" :key="pokemon.name" :value="pokemon.name">
                       {{ pokemon.name }}
                     </option>
@@ -78,7 +78,7 @@
                       ref="playerDamageDealtInput"
                       v-model="player.newDamageDealt"
                       @keyup.enter="stopEditingDamageDealt(player)"
-                      class="player-input"
+                      class="status-input"
                     />
                     <div v-if="!player.isEditingDamageTaken" @click="startEditingDamageTaken(player)">
                       <PlayerStatus
@@ -92,7 +92,7 @@
                       ref="playerDamageTakenInput"
                       v-model="player.newDamageTaken"
                       @keyup.enter="stopEditingDamageTaken(player)"
-                      class="player-input"
+                      class="status-input"
                     />
                     <div v-if="!player.isEditingRecovery" @click="startEditingRecovery(player)">
                       <PlayerStatus
@@ -106,7 +106,7 @@
                       ref="playerRecoveryInput"
                       v-model="player.newRecovery"
                       @keyup.enter="stopEditingRecovery(player)"
-                      class="player-input"
+                      class="status-input"
                     />
                   </div>
                 </div>
@@ -195,7 +195,7 @@
                       ref="playerDamageDealtInput"
                       v-model="player.newDamageDealt"
                       @keyup.enter="stopEditingDamageDealt(player)"
-                      class="player-input"
+                      class="status-input"
                     />
                     <div v-if="!player.isEditingDamageTaken" @click="startEditingDamageTaken(player)">
                       <PlayerStatus
@@ -209,7 +209,7 @@
                       ref="playerDamageTakenInput"
                       v-model="player.newDamageTaken"
                       @keyup.enter="stopEditingDamageTaken(player)"
-                      class="player-input"
+                      class="status-input"
                     />
                     <div v-if="!player.isEditingRecovery" @click="startEditingRecovery(player)">
                       <PlayerStatus
@@ -223,7 +223,7 @@
                       ref="playerRecoveryInput"
                       v-model="player.newRecovery"
                       @keyup.enter="stopEditingRecovery(player)"
-                      class="player-input"
+                      class="status-input"
                     />
                   </div>
                 </div>
@@ -652,6 +652,17 @@ export default {
   font-weight: 500;
   letter-spacing: -0.36px;
 }
+.status-input {
+  width: 65px;
+  border: none;
+  font-size: 19px;
+  background-color: white;
+  color: black;
+  border-radius: 2px;
+  font-family: 'Exo 2';
+  font-weight: 500;
+  letter-spacing: -0.36px;
+}
 .level-input {
   position: absolute;
   width: 45px;
@@ -672,11 +683,13 @@ export default {
 }
 .select-pokemon {
   z-index: 990;
+  max-width: 120px;
   position: absolute;
   border: none;
   font-size: 19px;
   background-color: white;
   color: black;
+  margin-right: 30px;
   border-radius: 2px;
   font-family: 'Exo 2';
   font-weight: 500;
