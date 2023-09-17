@@ -1,5 +1,5 @@
 <template>
-  <div class="teams-list-results" ref="captureContent">
+  <div class="teams-list-results capture-area">
     <div class="purple-team">
       <div class="result-bar"><span>Victorious</span><span>{{ purpleScore }}</span></div>
       <div class="player-list">
