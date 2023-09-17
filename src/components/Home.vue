@@ -25,10 +25,11 @@
             <img
               class="add-button"
               :class="{ 'last-purple-player': isLastItem(player) && player.type === 'purple' }"
-              src="/assets/buttons/add-friend.svg"
+              :src="player.isFriendAdded ? '/assets/buttons/added-friend.svg' : '/assets/buttons/add-friend.svg'"
               width="37"
               height="37"
               alt="Pokémon Image"
+              @click="toggleFriendStatus(player)"
             />
             <div class="player-pattern">
               <div class="playerListStyle player-container">
@@ -141,11 +142,11 @@
           <div v-for="player in orangeTeam" :key="player.name" class="player-add">
             <img
               class="add-button"
-              :class="{ 'last-purple-player': isLastItem(player) && player.type === 'purple' }"
-              src="/assets/buttons/add-friend.svg"
+              :src="player.isFriendAdded ? '/assets/buttons/added-friend.svg' : '/assets/buttons/add-friend.svg'"
               width="37"
               height="37"
               alt="Pokémon Image"
+              @click="toggleFriendStatus(player)"
             />
             <div class="player-pattern">
               <div class="playerListStyle player-container">
@@ -242,7 +243,7 @@
     <button @click="generateRandomNames" class="button-style"><img src="../assets/random-ico.svg">Randomize Nicknames</button>
   </div>
   <div class="instructions">
-    <div class="aviso"><b>Click</b> to edit PlayerName, Pokémon, Level and Status. <b>Enter</b> to confirm.</div>
+    <div class="aviso"><b>Click</b> to edit PlayerName, Pokémon, Level, Friend and Status. <b>Enter</b> to confirm.</div>
     <div class="shortcut">To take a capture <b>Win + Shift + S</b> on Windows or <b>Cmd + Shift + 4</b> on Mac</div>
     <div class="credits">Made with love and hate by <a href="https://twitter.com/reidophotoshops" target="_blank">ReiDoPhotoshops</a></div>
   </div>
@@ -272,6 +273,7 @@ export default {
           totalDamageDealt: 88562,
           totalDamageTaken: 5352,
           totalRecovery: 9400,
+          isFriendAdded: false
         },
         {
           name: "Makoto_x3",
@@ -281,6 +283,7 @@ export default {
           totalDamageDealt: 109350,
           totalDamageTaken: 88020,
           totalRecovery: 34705,
+          isFriendAdded: false
         },
         {
           name: "Olivotec",
@@ -290,6 +293,7 @@ export default {
           totalDamageDealt: 63400,
           totalDamageTaken: 18232,
           totalRecovery: 7650,
+          isFriendAdded: false
         },
         {
           name: "Alanzetee",
@@ -299,6 +303,7 @@ export default {
           totalDamageDealt: 82600,
           totalDamageTaken: 12654,
           totalRecovery: 1100,
+          isFriendAdded: true
         },
         {
           name: "ttvReiDoPS",
@@ -308,6 +313,7 @@ export default {
           totalDamageDealt: 148820,
           totalDamageTaken: 75500,
           totalRecovery: 25803,
+          isFriendAdded: false
         },
       ],
       orangeTeam: [
@@ -319,6 +325,7 @@ export default {
           totalDamageDealt: 75030,
           totalDamageTaken: 56720,
           totalRecovery: 23023,
+          isFriendAdded: false
         },
         {
           name: 'f3rZera',
@@ -328,6 +335,7 @@ export default {
           totalDamageDealt: 44523,
           totalDamageTaken: 52356,
           totalRecovery: 15232,
+          isFriendAdded: false
         },
         {
           name: 'Kinkiwi',
@@ -337,6 +345,7 @@ export default {
           totalDamageDealt: 56023,
           totalDamageTaken: 86025,
           totalRecovery: 159023,
+          isFriendAdded: false
         },
         {
           name: 'Tatuliz',
@@ -346,6 +355,7 @@ export default {
           totalDamageDealt: 45323,
           totalDamageTaken: 130234,
           totalRecovery: 50232,
+          isFriendAdded: false
         },
         {
           name: 'Zanarc',
@@ -355,6 +365,7 @@ export default {
           totalDamageDealt: 15625,
           totalDamageTaken: 35232,
           totalRecovery: 3245,
+          isFriendAdded: false
         },
       ],
       isSelectOpen: false, // Variável para rastrear se o select está aberto
@@ -464,6 +475,12 @@ export default {
     },
   },
   methods: {
+    // Metodo para alteração de amizade
+    toggleFriendStatus(player) {
+      player.isFriendAdded = !player.isFriendAdded;
+    },
+
+    // Metodo para geração de nomes aleatorios
     generateRandomNames() {
       // Armazene o nome do último jogador do purpleTeam
       const lastPurplePlayerName = this.purpleTeam[this.purpleTeam.length - 1].name;

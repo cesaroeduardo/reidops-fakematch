@@ -201,10 +201,12 @@ body {
 .pokemon-avatar:hover img {
   opacity: .4;
   z-index: 0;
+  cursor: pointer;
 }
 
 .player-name:hover {
   opacity: .6;
+  cursor: pointer;
 }
 
 .status-row {
@@ -225,6 +227,10 @@ body {
 
 .add-button {
   opacity: 1;
+}
+.add-button:hover {
+  opacity: .65;
+  cursor: pointer;
 }
 
 .box-level {
@@ -249,6 +255,7 @@ body {
 }
 .box-level:hover {
   opacity: .6;
+  cursor: pointer;
 }
 
 
@@ -307,6 +314,7 @@ button {
 }
 .score:hover {
   opacity: .6;
+  cursor: pointer;
 }
 .purple-score {
   display: flex;
@@ -356,6 +364,7 @@ button:hover {
 }
 .total-status:hover {
   opacity: .6;
+  cursor: pointer;
 }
 
 .status-bar {
