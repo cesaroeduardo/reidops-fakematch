@@ -648,12 +648,12 @@ export default {
   max-width: 120px;
   width: auto;
   border: none;
-  font-size: 19px;
+  font-size: 16px;
   background-color: white;
   color: black;
   border-radius: 2px;
-  font-family: 'Exo 2';
-  font-weight: 500;
+  font-family: "a-otf-ud-shin-maru-go-pr6n", sans-serif;
+  font-weight: 600;
   letter-spacing: -0.36px;
 }
 .status-input {
@@ -663,8 +663,8 @@ export default {
   background-color: white;
   color: black;
   border-radius: 2px;
-  font-family: 'Exo 2';
-  font-weight: 500;
+  font-family: "Exo 2";
+  font-weight: 600;
   letter-spacing: -0.36px;
 }
 .level-input {
@@ -673,31 +673,30 @@ export default {
   margin-left: 30px;
   margin-top: 30px;
   border: none;
-  font-size: 19px;
+  font-size: 16px;
   background-color: white;
   color: black;
   border-radius: 2px;
-  font-family: 'Exo 2';
-  font-weight: 500;
+  font-family: "a-otf-ud-shin-maru-go-pr6n", sans-serif;
+  font-weight: 600;
   letter-spacing: -0.36px;
   z-index: 2;
 }
 .last-purple-player {
   opacity: 0; /* Ajuste a opacidade conforme necessário */
 }
-.select-pokemon {
+.select-pokemon, option {
   z-index: 990;
   max-width: 120px;
   position: absolute;
   border: none;
-  font-size: 19px;
+  font-size: 16px;
   background-color: white;
   color: black;
   margin-right: 30px;
   border-radius: 2px;
-  font-family: 'Exo 2';
-  font-weight: 500;
-  letter-spacing: -0.36px;
+  font-family: "a-otf-ud-shin-maru-go-pr6n", sans-serif;
+  font-weight: 700;
 }
 .score-input {
   width: 65px;
@@ -707,7 +706,8 @@ export default {
   color: black;
   border-radius: 2px;
   font-family: 'Exo 2';
-  font-weight: 500;
+  font-weight: 700;
+  text-align: center;
   letter-spacing: -0.36px;
   z-index: 2;
 }
