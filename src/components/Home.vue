@@ -107,7 +107,7 @@
 
     <!-- Orange Team -->
     <div class="orange-team">
-      <div class="result-bar"><span>Surrender</span><span>{{ orangeScore }}</span></div>
+      <div class="result-bar"><span>Surrendered</span><span>{{ orangeScore }}</span></div>
       <div class="player-list">
         <div class="status-caption">Dmg. Dealt Dmg. Taken <b>Recovery</b></div>
         <div class="playerlist">
