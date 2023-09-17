@@ -211,6 +211,8 @@
       </div>
     </div>
   </div>
+  <div class="aviso">Double Click to edit PlayerName, Pokémon, Level and Status.</div>
+  <div class="credits">Made with love and hate by <a href="https://twitter.com/reidophotoshops" target="_blank">ReiDoPhotoshops</a></div>
 </template>
 
 <script>
@@ -594,5 +596,20 @@ export default {
   font-family: 'Exo 2';
   font-weight: 500;
   letter-spacing: -0.36px;
+}
+.aviso {
+  width: 100%;
+  text-align: center;
+  color: #ffffff95;
+  margin: 0 auto;
+  font-family: 'PT Sans';
+}
+.credits {
+  width: 100%;
+  text-align: center;
+  color: #ffffff60;
+  font-size: 13px;
+  margin: 15px auto;
+  font-family: 'PT Sans';
 }
 </style>
