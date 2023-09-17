@@ -11,7 +11,7 @@ body {
   flex-direction: row;
   width: 1061px;
   height: 741px;
-  background: url(../public/assets/background.jpg);
+  background: url(../assets/background.jpg);
   background-repeat: no-repeat;
   background-size: 1061px 741px;
   margin: 44px auto;
@@ -23,7 +23,7 @@ body {
 }
 .orange-team .playerListStyle {
   background: #B4642A;
-  background-image: url(../public/assets/card-pattern.svg);
+  background-image: url(../assets/card-pattern.svg);
   background-repeat: no-repeat;
 }
 
