@@ -2,7 +2,18 @@
   <div class="teams-list-results">
     <!-- Purple Team -->
     <div class="purple-team">
-      <div class="result-bar"><span>Victorious</span><span>{{ purpleScore }}</span></div>
+      <div class="result-bar">
+        <span>Victorious</span>
+        <span @click="editPurpleScore" class="score" v-if="!editingPurpleScore">{{ purpleScore }}</span>
+        <input
+          v-else
+          v-model="purpleScore"
+          type="number"
+          @keydown.enter="editingPurpleScore = false"
+          @blur="editingPurpleScore = false"
+          class="score-input"
+        />
+      </div>
       <div class="player-list">
         <div class="status-caption">Dmg. Dealt Dmg. Taken <b>Recovery</b></div>
         <div class="playerlist">
@@ -108,7 +119,18 @@
 
     <!-- Orange Team -->
     <div class="orange-team">
-      <div class="result-bar"><span>Surrendered</span><span>{{ orangeScore }}</span></div>
+      <div class="result-bar">
+        <span>Surrendered</span>
+        <span @click="editOrangeScore" class="score" v-if="!editingOrangeScore">{{ orangeScore }}</span>
+        <input
+          v-else
+          v-model="orangeScore"
+          type="number"
+          @keydown.enter="editingOrangeScore = false"
+          @blur="editingOrangeScore = false"
+          class="score-input"
+        />
+      </div>
       <div class="player-list">
         <div class="status-caption">Dmg. Dealt Dmg. Taken <b>Recovery</b></div>
         <div class="playerlist">
@@ -236,6 +258,8 @@ export default {
     return {
       purpleScore: 360,
       orangeScore: 0,
+      editingOrangeScore: false,
+      editingPurpleScore: false,
       purpleTeam: [
         {
           name: "Medot",
@@ -506,6 +530,16 @@ export default {
       });
     },
 
+    // Método para alterar a pontuação dos times
+    editOrangeScore() {
+      this.editingOrangeScore = true;
+      this.editingPurpleScore = false;
+    },
+    editPurpleScore() {
+      this.editingOrangeScore = false;
+      this.editingPurpleScore = true;
+    },
+
     // Método para parar a edição do nome do jogador
     stopEditing(player) {
       player.isEditing = false;
@@ -647,5 +681,17 @@ export default {
   font-family: 'Exo 2';
   font-weight: 500;
   letter-spacing: -0.36px;
+}
+.score-input {
+  width: 65px;
+  border: none;
+  font-size: 19px;
+  background-color: white;
+  color: black;
+  border-radius: 2px;
+  font-family: 'Exo 2';
+  font-weight: 500;
+  letter-spacing: -0.36px;
+  z-index: 2;
 }
 </style>

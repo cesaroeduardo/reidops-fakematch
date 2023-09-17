@@ -314,6 +314,9 @@ button {
   cursor: pointer;
   border-radius: 99px;
 }
+.score:hover {
+  opacity: .6;
+}
 
 button:hover {
   background-color: #522e8f;
