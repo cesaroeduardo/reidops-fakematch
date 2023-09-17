@@ -1,5 +1,6 @@
 <template>
   <div class="teams-list-results capture-area">
+    <img src="../assets/buttons.png" class="buttons-image">
     <div class="purple-team">
       <div class="result-bar"><span>Victorious</span><span>{{ purpleScore }}</span></div>
       <div class="player-list">
@@ -612,5 +613,8 @@ export default {
   font-size: 13px;
   margin: 15px auto;
   font-family: 'PT Sans';
+}
+.buttons-image {
+  position: absolute;
 }
 </style>

@@ -110,6 +110,12 @@ body {
   align-items: center;
   align-self: stretch;
 }
+.purple-team {
+  background: #33215690;
+}
+.orange-team {
+  background: #48251A90;
+}
   .purple-team .result-bar {
     background: #9500FE;
   }
