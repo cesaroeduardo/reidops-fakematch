@@ -1,0 +1,365 @@
+body {
+  margin: 0;
+  font-family:'Exo 2', 'PT Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.teams-list-results {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 1061px;
+  height: 741px;
+  background: url(../public/assets/background.jpg);
+  background-repeat: no-repeat;
+  background-size: 1061px 741px;
+  margin: 44px auto;
+  border-radius: 10px;
+}
+
+.playerListStyle {
+  background: #6237AB;
+}
+.orange-team .playerListStyle {
+  background: #B4642A;
+  background-image: url(../public/assets/card-pattern.svg);
+  background-repeat: no-repeat;
+}
+
+.playerlist {
+  display: flex;
+  width: 494.4px;
+  height: 371px;
+  padding: 4px 18px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.player-name {
+  color: #EFE2FF;
+  font-size: 19.5px;
+  font-family: 'PT Sans';
+  letter-spacing: 0;
+  margin-left: 6px;
+  line-height: 56px;
+}
+
+.last-item .player-name {
+  color: #000 !important;
+}
+
+.statusStyle {
+  width: 64px;
+  height: 14px;
+  border-radius: 2px;
+  background: #2E1753;
+}
+.orange-team .statusStyle {
+  background: #562E0F;
+}
+
+.player-list {
+  display: flex;
+  width: 494.4px;
+  height: 371px;
+  padding: 4px 18px;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.player-add {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+.orange-team .player-add {
+  flex-direction: row-reverse;
+}
+
+.status-caption {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  align-self: stretch;
+  color: #FFF;
+  text-align: right;
+  font-size: 17px;
+  font-family: PT Sans;
+  letter-spacing: -0.51px;
+  line-height: 19px;
+}
+.status-caption b{
+  margin: 0 10px 0 5px;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 19px;
+}
+  .orange-team .status-caption {
+    padding-right: 60px;
+  }
+
+.result-bar {
+  display: flex;
+  height: 24px;
+  padding: 0px 20px 0px 36px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+  .purple-team .result-bar {
+    background: #9500FE;
+  }
+  .orange-team .result-bar {
+    background: #FE9800;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .result-bar span:first-child {
+    font-size: 18px;
+    font-family: Exo 2;
+    font-style: italic;
+    font-weight: 800;
+    letter-spacing: -0.36px;
+    text-transform: uppercase;
+    color: rgba(248, 243, 131, 1);
+    text-shadow: -1px -1px 0 #520E92, 1px -1px 0  #520E92, -1px 1px 0  #520E92, 1px 1px 0  #520E92;
+  }
+  .result-bar span {
+    color: #FCFBFF;
+    text-align: center;
+    font-size: 20px;
+    font-family: Exo 2;
+    font-weight: 800;
+    letter-spacing: -0.6px;
+  }
+  .orange-team .result-bar span {
+    margin-left: -23px;
+  }
+
+
+
+  .inline-text_copy--active,
+.inline-text_input--active {
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  padding: 0;
+  background: none;
+  border: none;
+  border-bottom: 1px dashed #999999;
+  outline: none;
+}
+
+.inline-text_copy--active {
+  cursor: pointer;
+}
+
+.inline-text_copy--hidden,
+.inline-text_input--hidden {
+  display: none;
+}
+
+.inline-text_input--active {
+  border-bottom: 1px solid #666666;
+  text-align: left;
+}
+
+
+
+/* PLAYERLIST */
+
+.player-container {
+  display: flex;
+  width: 443px;
+  height: 53px;
+  padding: 3px;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background-image: url(../public/assets/card-pattern.svg);
+  background-repeat: no-repeat;
+}
+
+.pokemon-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  border: 1.5px solid #FFFAFF;
+  background: #D4ECFF;
+}
+
+.player-name {
+  color: #fff;
+  font-size: 19.5px;
+  font-family: 'PT Sans';
+  font-weight: 400;
+  letter-spacing: .02px;
+  margin-left: 6px;
+  line-height: 56px;
+}
+
+.status-row {
+  display: flex;
+  padding: 0 0 8px 0;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.box-name-status {
+  display: flex;
+  padding: 1.149px 6.891px;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.add-button {
+  opacity: 1;
+}
+
+.box-level {
+  position: absolute;
+  margin-left: 40px;
+  margin-top: 37px;
+  display: flex;
+  width: 15px;
+  height: 15px;
+  padding: 1px 2px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  background: #000201;
+  color: #FFF;
+  font-size: 12.397px;
+  font-family: "Exo 2";
+  font-weight: 800;
+  letter-spacing: -.05px;
+}
+
+
+/* MODAL */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 80%;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+}
+
+
+button {
+  display: block;
+  font-weight: 800;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  background-color: #673AB4;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 99px;
+}
+
+button:hover {
+  background-color: #522e8f;
+}
+
+.tertiary-button {
+  background-color: #fff;
+  color: grey;
+}
+.tertiary-button:hover {
+  background-color: #fff;
+  color: rgb(59, 59, 59);
+}
+
+.button-home {
+  position: absolute;
+  width: 320px;
+  margin: 630px 421px 0 421px;
+}
+
+/* STATUS */
+
+.status-container {
+  display: flex;
+  width: 70px;
+  height: 45px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.total-status {
+  color: #FCFBFF;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Exo 2';
+  font-weight: 800;
+  letter-spacing: -0.7px;
+}
+
+.status-bar {
+  display: flex;
+  width: 64px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.status-color {
+  width: 100%;
+  position: relative;
+  height: 14px;
+  z-index: 9;
+  border-radius: 2px 0 0 2px;
+}
+
+
+/* UPDATE FORM */
+.form-update {
+  max-height: 50vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-update .form-block {
+  display: flex;
+  flex-direction: row;
+}
