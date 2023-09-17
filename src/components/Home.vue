@@ -1,5 +1,5 @@
 <template>
-  <div class="teams-list-results capture-area">
+  <div class="teams-list-results">
     <!-- Purple Team -->
     <div class="purple-team">
       <div class="result-bar"><span>Victorious</span><span>{{ purpleScore }}</span></div>
@@ -213,13 +213,19 @@
     </div>
     <!-- <img src="../assets/buttons.png" class="buttons-image"> -->
   </div>
-  <div class="aviso"><b>Click</b> to edit PlayerName, Pokémon, Level and Status. <b>Enter</b> to confirm.</div>
-  <div class="shortcut">To take a capture <b>Win + Shift + S</b> on Windows or <b>Cmd + Shift + 4</b> on Mac</div>
-  <div class="credits">Made with love and hate by <a href="https://twitter.com/reidophotoshops" target="_blank">ReiDoPhotoshops</a></div>
+  <div class="actions">
+    <button @click="generateRandomNames" class="button-style"><img src="../assets/random-ico.svg">Randomize Nicknames</button>
+  </div>
+  <div class="instructions">
+    <div class="aviso"><b>Click</b> to edit PlayerName, Pokémon, Level and Status. <b>Enter</b> to confirm.</div>
+    <div class="shortcut">To take a capture <b>Win + Shift + S</b> on Windows or <b>Cmd + Shift + 4</b> on Mac</div>
+    <div class="credits">Made with love and hate by <a href="https://twitter.com/reidophotoshops" target="_blank">ReiDoPhotoshops</a></div>
+  </div>
 </template>
 
 <script>
 import PlayerStatus from '../components/PlayerStatus.vue';
+import { playerNames } from '../utils/RandomNames.js';
 
 export default {
   name: "Home",
@@ -233,15 +239,15 @@ export default {
       purpleTeam: [
         {
           name: "Medot",
-          level: 15,
+          level: 14,
           image: "/assets/pokemons/Gardevoir.png",
           type: 'purple', // Added type property to distinguish team
-          totalDamageDealt: 120562,
+          totalDamageDealt: 88562,
           totalDamageTaken: 5352,
           totalRecovery: 9400,
         },
         {
-          name: "Makotox3",
+          name: "Makoto_x3",
           level: 14,
           image: "/assets/pokemons/Zeraora.png",
           type: 'purple', // Added type property to distinguish team
@@ -263,7 +269,7 @@ export default {
           level: 14,
           image: "/assets/pokemons/Pikachu.png",
           type: 'purple', // Added type property to distinguish team
-          totalDamageDealt: 180600,
+          totalDamageDealt: 82600,
           totalDamageTaken: 12654,
           totalRecovery: 1100,
         },
@@ -280,25 +286,25 @@ export default {
       orangeTeam: [
         {
           name: 'Falb',
-          level: 15,
+          level: 13,
           image: "/assets/pokemons/Lucario.png",
           type: 'orange', // Added type property to distinguish team
-          totalDamageDealt: 126030,
+          totalDamageDealt: 75030,
           totalDamageTaken: 56720,
           totalRecovery: 23023,
         },
         {
           name: 'f3rZera',
-          level: 15,
+          level: 12,
           image: "/assets/pokemons/Glaceon.png",
           type: 'orange', // Added type property to distinguish team
-          totalDamageDealt: 88523,
+          totalDamageDealt: 44523,
           totalDamageTaken: 52356,
           totalRecovery: 15232,
         },
         {
           name: 'Kinkiwi',
-          level: 15,
+          level: 12,
           image: "/assets/pokemons/Blissey.png",
           type: 'orange', // Added type property to distinguish team
           totalDamageDealt: 56023,
@@ -307,7 +313,7 @@ export default {
         },
         {
           name: 'Tatuliz',
-          level: 15,
+          level: 13,
           image: "/assets/pokemons/Lapras.png",
           type: 'orange', // Added type property to distinguish team
           totalDamageDealt: 45323,
@@ -430,6 +436,45 @@ export default {
     },
   },
   methods: {
+    generateRandomNames() {
+      // Armazene o nome do último jogador do purpleTeam
+      const lastPurplePlayerName = this.purpleTeam[this.purpleTeam.length - 1].name;
+
+      // Embaralhe a lista de nomes para obter uma ordem aleatória
+      const shuffledNames = this.shuffleArray(playerNames);
+
+      // Preencha seus jogadores com nomes aleatórios da lista
+      this.purpleTeam.forEach((player, index) => {
+        if (player.name !== lastPurplePlayerName) {
+          player.name = shuffledNames[index] || ""; // Use um nome aleatório ou uma string vazia
+        }
+      });
+
+      this.orangeTeam.forEach((player, index) => {
+        player.name = shuffledNames[index + this.purpleTeam.length] || ""; // Continue a partir do próximo índice
+      });
+    },
+
+    shuffleArray(array) {
+      // Função para embaralhar um array
+      let currentIndex = array.length,
+        randomIndex,
+        temporaryValue;
+
+      while (currentIndex !== 0) {
+        // Escolha um elemento aleatório restante
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // E troque-o pelo elemento atual
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+
+      return array;
+    },
+
   // Método para alternar a visibilidade do seletor do jogador
   toggleSelect(player) {
       player.selectedPokemon = player.name; // Garanta que o valor selecionado seja o Pokémon atual
@@ -602,30 +647,5 @@ export default {
   font-family: 'Exo 2';
   font-weight: 500;
   letter-spacing: -0.36px;
-}
-.aviso {
-  width: 100%;
-  text-align: center;
-  color: #ffffff95;
-  margin: 0 auto;
-  font-size: 16px;
-  font-family: 'PT Sans';
-  line-height: 26px;
-}
-.shortcut {
-  width: 100%;
-  text-align: center;
-  color: #ffffff95;
-  font-size: 14px;
-  margin: 8px auto;
-  font-family: 'PT Sans';
-  line-height: 20px;}
-.credits {
-  width: 100%;
-  text-align: center;
-  color: #ffffff60;
-  font-size: 12px;
-  margin: 25px auto 45px auto;
-  font-family: 'PT Sans';
 }
 </style>
