@@ -334,6 +334,7 @@ export default {
         { name: 'Blaziken', image: '/assets/pokemons/Blaziken.png' },
         { name: 'Blissey', image: '/assets/pokemons/Blissey.png' },
         { name: 'Buzzwole', image: '/assets/pokemons/Buzzwole.png' },
+        { name: 'Chandelure', image: '/assets/pokemons/Chandelure.png' },
         { name: 'Charizard', image: '/assets/pokemons/Charizard.png' },
         { name: 'Cinderace', image: '/assets/pokemons/Cinderace.png' },
         { name: 'Clefable', image: '/assets/pokemons/Clefable.png' },
@@ -623,7 +624,7 @@ export default {
   text-align: center;
   color: #ffffff60;
   font-size: 12px;
-  margin: 25px auto 0 auto;
+  margin: 25px auto 45px auto;
   font-family: 'PT Sans';
 }
 </style>
