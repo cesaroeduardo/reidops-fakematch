@@ -1,6 +1,5 @@
 <template>
   <div class="teams-list-results capture-area">
-    <img src="../assets/buttons.png" class="buttons-image">
     <div class="purple-team">
       <div class="result-bar"><span>Victorious</span><span>{{ purpleScore }}</span></div>
       <div class="player-list">
@@ -211,6 +210,7 @@
         </div>
       </div>
     </div>
+    <!-- <img src="../assets/buttons.png" class="buttons-image"> -->
   </div>
   <div class="aviso">Double Click to edit PlayerName, Pokémon, Level and Status. <br>Enter to confirm.</div>
   <div class="credits">Made with love and hate by <a href="https://twitter.com/reidophotoshops" target="_blank">ReiDoPhotoshops</a></div>
