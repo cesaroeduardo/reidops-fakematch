@@ -390,6 +390,7 @@ export default {
         { name: 'Greedent', image: '/assets/pokemons/Greedent.png' },
         { name: 'Greninja', image: '/assets/pokemons/Greninja.png' },
         { name: 'Hoopa', image: '/assets/pokemons/Hoopa.png' },
+        { name: 'Inteleon', image: '/assets/pokemons/Inteleon.png' },
         { name: 'Lapras', image: '/assets/pokemons/Lapras.png' },
         { name: 'Lucario', image: '/assets/pokemons/Lucario.png' },
         { name: 'Machamp', image: '/assets/pokemons/Machamp.png' },
@@ -644,7 +645,7 @@ export default {
 
 <style scoped>
 .player-input {
-  max-width: 85px;
+  max-width: 120px;
   width: auto;
   border: none;
   font-size: 19px;
