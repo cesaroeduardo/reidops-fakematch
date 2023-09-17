@@ -583,6 +583,7 @@ export default {
   font-family: 'Exo 2';
   font-weight: 500;
   letter-spacing: -0.36px;
+  z-index: 2;
 }
 .last-purple-player {
   opacity: 0; /* Ajuste a opacidade conforme necessário */

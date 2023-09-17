@@ -198,8 +198,9 @@ body {
   background: #D4ECFF;
 }
 
-.pokemon-avatar:hover {
-  opacity: .75;
+.pokemon-avatar:hover img {
+  opacity: .4;
+  z-index: 0;
 }
 
 .player-name {
@@ -212,7 +213,7 @@ body {
   line-height: 56px;
 }
 .player-name:hover {
-  opacity: .75;
+  opacity: .6;
 }
 
 .status-row {
@@ -236,6 +237,7 @@ body {
 }
 
 .box-level {
+  z-index: 1;
   position: absolute;
   margin-left: 40px;
   margin-top: 37px;
@@ -346,6 +348,9 @@ button:hover {
   font-family: 'Exo 2';
   font-weight: 800;
   letter-spacing: -0.7px;
+}
+.total-status:hover {
+  opacity: .6;
 }
 
 .status-bar {
