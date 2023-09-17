@@ -326,7 +326,7 @@ export default {
       availablePokemon: [
         { name: 'Absol', image: '/assets/pokemons/Absol.png' },
         { name: 'Aegislash', image: '/assets/pokemons/Aegislash.png' },
-        { name: 'Alolan Ninetales', image: '/assets/pokemons/Alolan_Ninetales.png' },
+        { name: 'Alolan Ninetales', image: '/assets/pokemons/AlolanNinetales.png' },
         { name: 'Azumarill', image: '/assets/pokemons/Azumarill.png' },
         { name: 'Blastoise', image: '/assets/pokemons/Blastoise.png' },
         { name: 'Blaziken', image: '/assets/pokemons/Blaziken.png' },
