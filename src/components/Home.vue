@@ -213,8 +213,8 @@
     </div>
     <!-- <img src="../assets/buttons.png" class="buttons-image"> -->
   </div>
-  <div class="aviso">Click to edit PlayerName, Pokémon, Level and Status. Enter to confirm.</div>
-  <div class="shortcut">To take a capture Win+Shift+S on Windows or Cmd+Shift+4 on Mac</div>
+  <div class="aviso"><b>Click</b> to edit PlayerName, Pokémon, Level and Status. <b>Enter</b> to confirm.</div>
+  <div class="shortcut">To take a capture <b>Win + Shift + S</b> on Windows or <b>Cmd+Shift+4</b> on Mac</div>
   <div class="credits">Made with love and hate by <a href="https://twitter.com/reidophotoshops" target="_blank">ReiDoPhotoshops</a></div>
 </template>
 
@@ -606,6 +606,7 @@ export default {
   text-align: center;
   color: #ffffff95;
   margin: 0 auto;
+  font-size: 16px;
   font-family: 'PT Sans';
   line-height: 26px;
 }
@@ -613,7 +614,7 @@ export default {
   width: 100%;
   text-align: center;
   color: #ffffff95;
-  font-size: 13px;
+  font-size: 14px;
   margin: 8px auto;
   font-family: 'PT Sans';
   line-height: 20px;}
@@ -621,7 +622,7 @@ export default {
   width: 100%;
   text-align: center;
   color: #ffffff60;
-  font-size: 13px;
+  font-size: 12px;
   margin: 25px auto 0 auto;
   font-family: 'PT Sans';
 }
