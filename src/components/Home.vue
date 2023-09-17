@@ -211,7 +211,7 @@
       </div>
     </div>
   </div>
-  <div class="aviso">Double Click to edit PlayerName, Pokémon, Level and Status.</div>
+  <div class="aviso">Double Click to edit PlayerName, Pokémon, Level and Status. <br>Enter to confirm.</div>
   <div class="credits">Made with love and hate by <a href="https://twitter.com/reidophotoshops" target="_blank">ReiDoPhotoshops</a></div>
 </template>
 
@@ -603,6 +603,7 @@ export default {
   color: #ffffff95;
   margin: 0 auto;
   font-family: 'PT Sans';
+  line-height: 26px;
 }
 .credits {
   width: 100%;
