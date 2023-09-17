@@ -1,5 +1,5 @@
 <template>
-  <div class="teams-list-results">
+  <div class="teams-list-results" ref="captureContent">
     <div class="purple-team">
       <div class="result-bar"><span>Victorious</span><span>{{ purpleScore }}</span></div>
       <div class="player-list">
@@ -227,96 +227,96 @@ export default {
       orangeScore: 0,
       purpleTeam: [
         {
-          name: "Aliado1",
+          name: "Medot",
           level: 15,
           image: "/assets/pokemons/Gardevoir.png",
           type: 'purple', // Added type property to distinguish team
-          totalDamageDealt: 400500,
-          totalDamageTaken: 5300,
+          totalDamageDealt: 120562,
+          totalDamageTaken: 5352,
           totalRecovery: 9400,
         },
         {
-          name: "Aliado2",
-          level: 15,
-          image: "/assets/pokemons/Charizard.png",
+          name: "Makotox3",
+          level: 14,
+          image: "/assets/pokemons/Zeraora.png",
           type: 'purple', // Added type property to distinguish team
-          totalDamageDealt: 320900,
-          totalDamageTaken: 7200,
-          totalRecovery: 11200,
+          totalDamageDealt: 109350,
+          totalDamageTaken: 88020,
+          totalRecovery: 34705,
         },
         {
-          name: "Aliado3",
-          level: 15,
-          image: "/assets/pokemons/Blastoise.png",
+          name: "Olivotec",
+          level: 13,
+          image: "/assets/pokemons/Mamoswine.png",
           type: 'purple', // Added type property to distinguish team
-          totalDamageDealt: 240700,
-          totalDamageTaken: 9500,
-          totalRecovery: 7600,
+          totalDamageDealt: 63400,
+          totalDamageTaken: 18232,
+          totalRecovery: 7650,
         },
         {
-          name: "Aliado4",
-          level: 15,
-          image: "/assets/pokemons/Venusaur.png",
-          type: 'purple', // Added type property to distinguish team
-          totalDamageDealt: 180600,
-          totalDamageTaken: 4200,
-          totalRecovery: 5300,
-        },
-        {
-          name: "Aliado5",
-          level: 15,
+          name: "Alanzetee",
+          level: 14,
           image: "/assets/pokemons/Pikachu.png",
           type: 'purple', // Added type property to distinguish team
-          totalDamageDealt: 140400,
-          totalDamageTaken: 6200,
-          totalRecovery: 8400,
+          totalDamageDealt: 180600,
+          totalDamageTaken: 12654,
+          totalRecovery: 1100,
+        },
+        {
+          name: "ttvReiDoPS",
+          level: 15,
+          image: "/assets/pokemons/Scizor.png",
+          type: 'purple', // Added type property to distinguish team
+          totalDamageDealt: 148820,
+          totalDamageTaken: 75500,
+          totalRecovery: 25803,
         },
       ],
       orangeTeam: [
         {
-          name: 'Inimigo1',
+          name: 'Falb',
           level: 15,
           image: "/assets/pokemons/Lucario.png",
           type: 'orange', // Added type property to distinguish team
           totalDamageDealt: 126030,
           totalDamageTaken: 56720,
-          totalRecovery: 2340,
+          totalRecovery: 23023,
         },
         {
-          name: 'Inimigo2',
+          name: 'f3rZera',
           level: 15,
           image: "/assets/pokemons/Glaceon.png",
           type: 'orange', // Added type property to distinguish team
-          totalDamageDealt: 99020,
-          totalDamageTaken: 38400,
-          totalRecovery: 6200,
+          totalDamageDealt: 88523,
+          totalDamageTaken: 52356,
+          totalRecovery: 15232,
         },
         {
-          name: 'Inimigo3',
+          name: 'Kinkiwi',
           level: 15,
           image: "/assets/pokemons/Blissey.png",
           type: 'orange', // Added type property to distinguish team
-          totalDamageDealt: 76090,
-          totalDamageTaken: 29300,
-          totalRecovery: 4080,
+          totalDamageDealt: 56023,
+          totalDamageTaken: 86025,
+          totalRecovery: 159023,
         },
         {
-          name: 'Inimigo4',
+          name: 'Tatuliz',
           level: 15,
-          image: "/assets/pokemons/Machamp.png",
+          image: "/assets/pokemons/Lapras.png",
           type: 'orange', // Added type property to distinguish team
-          totalDamageDealt: 52060,
-          totalDamageTaken: 21500,
-          totalRecovery: 3060,
+          totalDamageDealt: 45323,
+          totalDamageTaken: 130234,
+          totalRecovery: 50232,
         },
         {
-          name: 'Inimigo5',
-          level: 15,
+          name: 'Zanarc',
+          level: 9,
           image: "/assets/pokemons/Dragonite.png",
           type: 'orange', // Added type property to distinguish team
-          totalDamageDealt: 45030,
-          totalDamageTaken: 16800,
-          totalRecovery: 2380,
+          totalDamageDealt: 15625,
+          totalDamageTaken: 35232,
+          totalRecovery: 3245,
         },
       ],
       isSelectOpen: false, // Variável para rastrear se o select está aberto
@@ -356,8 +356,7 @@ export default {
         { name: 'Machamp', image: '/assets/pokemons/Machamp.png' },
         { name: 'Mamoswine', image: '/assets/pokemons/Mamoswine.png' },
         { name: 'Mew', image: '/assets/pokemons/Mew.png' },
-        { name: 'MewtwoY', image: '/assets/pokemons/MewtwoY.png' },
-        { name: 'MewtwoX', image: '/assets/pokemons/MewtwoX.png' },
+        { name: 'Mewtwo', image: '/assets/pokemons/Mewtwo.png' },
         { name: 'Mr. Mime', image: '/assets/pokemons/Mr_Mime.png' },
         { name: 'Pikachu', image: '/assets/pokemons/Pikachu.png' },
         { name: 'Sableye', image: '/assets/pokemons/Sableye.png' },
@@ -369,6 +368,7 @@ export default {
         { name: 'Trevenant', image: '/assets/pokemons/Trevenant.png' },
         { name: 'Tsareena', image: '/assets/pokemons/Tsareena.png' },
         { name: 'Tyranitar', image: '/assets/pokemons/Tyranitar.png' },
+        { name: 'Umbreon', image: '/assets/pokemons/Umbreon.png' },
         { name: 'Urshifu', image: '/assets/pokemons/Urshifu.png' },
         { name: 'Venusaur', image: '/assets/pokemons/Venusaur.png' },
         { name: 'Wigglytuff', image: '/assets/pokemons/Wigglytuff.png' },
