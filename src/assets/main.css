@@ -198,6 +198,10 @@ body {
   background: #D4ECFF;
 }
 
+.pokemon-avatar:hover {
+  opacity: .75;
+}
+
 .player-name {
   color: #fff;
   font-size: 19.5px;
@@ -206,6 +210,9 @@ body {
   letter-spacing: .02px;
   margin-left: 6px;
   line-height: 56px;
+}
+.player-name:hover {
+  opacity: .75;
 }
 
 .status-row {

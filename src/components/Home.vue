@@ -1,5 +1,6 @@
 <template>
   <div class="teams-list-results capture-area">
+    <!-- Purple Team -->
     <div class="purple-team">
       <div class="result-bar"><span>Victorious</span><span>{{ purpleScore }}</span></div>
       <div class="player-list">
@@ -30,7 +31,7 @@
                     class="level-input"
                   />
                   <img
-                    @dblclick="toggleSelect(player)"
+                    @click="toggleSelect(player)"
                     :src="player.image"
                     :alt="player.selectedPokemon"
                     width="50"
@@ -43,7 +44,7 @@
                   </select>
                 </div>
                 <div class="box-name-status">
-                  <div v-if="!player.isEditing" :style="playerNameStyle(player)" @dblclick="startEditing(player)" class="player-name">
+                  <div v-if="!player.isEditing" :style="playerNameStyle(player)" @click="startEditing(player)" class="player-name">
                     {{ player.name }}
                   </div>
                   <input
@@ -54,7 +55,7 @@
                     class="player-input"
                   />
                   <div class="status-row">
-                    <div v-if="!player.isEditingDamageDealt" @dblclick="startEditingDamageDealt(player)">
+                    <div v-if="!player.isEditingDamageDealt" @click="startEditingDamageDealt(player)">
                       <PlayerStatus
                         :total="player.totalDamageDealt"
                         :percentage="player.damageDealtPercentage"
@@ -68,7 +69,7 @@
                       @keyup.enter="stopEditingDamageDealt(player)"
                       class="player-input"
                     />
-                    <div v-if="!player.isEditingDamageTaken" @dblclick="startEditingDamageTaken(player)">
+                    <div v-if="!player.isEditingDamageTaken" @click="startEditingDamageTaken(player)">
                       <PlayerStatus
                         :total="player.totalDamageTaken"
                         :percentage="player.damageTakenPercentage"
@@ -82,7 +83,7 @@
                       @keyup.enter="stopEditingDamageTaken(player)"
                       class="player-input"
                     />
-                    <div v-if="!player.isEditingRecovery" @dblclick="startEditingRecovery(player)">
+                    <div v-if="!player.isEditingRecovery" @click="startEditingRecovery(player)">
                       <PlayerStatus
                         :total="player.totalRecovery"
                         :percentage="player.recoveryPercentage"
@@ -136,7 +137,7 @@
                     class="level-input"
                   />
                   <img
-                    @dblclick="toggleSelect(player)"
+                    @click="toggleSelect(player)"
                     :src="player.image"
                     :alt="player.selectedPokemon"
                     width="50"
@@ -149,7 +150,7 @@
                   </select>
                 </div>
                 <div class="box-name-status">
-                  <div v-if="!player.isEditing" :style="playerNameStyle(player)" @dblclick="startEditing(player)" class="player-name">
+                  <div v-if="!player.isEditing" :style="playerNameStyle(player)" @click="startEditing(player)" class="player-name">
                     {{ player.name }}
                   </div>
                   <input
@@ -160,7 +161,7 @@
                     class="player-input"
                   />
                   <div class="status-row">
-                    <div v-if="!player.isEditingDamageDealt" @dblclick="startEditingDamageDealt(player)">
+                    <div v-if="!player.isEditingDamageDealt" @click="startEditingDamageDealt(player)">
                       <PlayerStatus
                         :total="player.totalDamageDealt"
                         :percentage="player.damageDealtPercentage"
@@ -174,7 +175,7 @@
                       @keyup.enter="stopEditingDamageDealt(player)"
                       class="player-input"
                     />
-                    <div v-if="!player.isEditingDamageTaken" @dblclick="startEditingDamageTaken(player)">
+                    <div v-if="!player.isEditingDamageTaken" @click="startEditingDamageTaken(player)">
                       <PlayerStatus
                         :total="player.totalDamageTaken"
                         :percentage="player.damageTakenPercentage"
@@ -188,7 +189,7 @@
                       @keyup.enter="stopEditingDamageTaken(player)"
                       class="player-input"
                     />
-                    <div v-if="!player.isEditingRecovery" @dblclick="startEditingRecovery(player)">
+                    <div v-if="!player.isEditingRecovery" @click="startEditingRecovery(player)">
                       <PlayerStatus
                         :total="player.totalRecovery"
                         :percentage="player.recoveryPercentage"
@@ -212,7 +213,7 @@
     </div>
     <!-- <img src="../assets/buttons.png" class="buttons-image"> -->
   </div>
-  <div class="aviso">Double Click to edit PlayerName, Pokémon, Level and Status. <br>Enter to confirm.</div>
+  <div class="aviso">Click to edit PlayerName, Pokémon, Level and Status. Enter to confirm.</div>
   <div class="credits">Made with love and hate by <a href="https://twitter.com/reidophotoshops" target="_blank">ReiDoPhotoshops</a></div>
 </template>
 
