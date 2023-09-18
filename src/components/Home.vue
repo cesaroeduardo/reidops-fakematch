@@ -3,7 +3,7 @@
     <!-- Purple Team -->
     <div class="purple-team">
       <div class="result-bar">
-        <span>Victorious</span>
+        <img src="../assets/victorious.png">
         <div class="purple-score">
           <img src="../assets/question-ico.png">
           <span @click="editPurpleScore" class="score" v-if="!editingPurpleScore">{{ purpleScore }}</span>
@@ -124,7 +124,7 @@
     <!-- Orange Team -->
     <div class="orange-team">
       <div class="result-bar">
-        <span>Surrendered</span>
+        <img src="../assets/surrendered.png">
         <span @click="editOrangeScore" class="score" v-if="!editingOrangeScore">{{ orangeScore }}</span>
         <input
           v-else
