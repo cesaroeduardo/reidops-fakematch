@@ -1,6 +1,11 @@
+@font-face {
+  font-family: 'PlayersName';
+  src: url('../assets/players-name-font.ttf') format('truetype');
+}
+
 body {
   margin: 0;
-  font-family:'Exo 2', 'PT Sans', sans-serif;
+  font-family:'Exo 2', 'PT Sans', 'PlayersName', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #1e1e1e;
@@ -40,9 +45,10 @@ body {
 .player-name {
   color: #ffffff90;
   font-size: 16px;
-  font-family: "a-otf-ud-shin-maru-go-pr6n", sans-serif;
-  font-weight: 600;
+  font-family: 'PlayersName';
+  font-weight: 500;
   letter-spacing: .2px;
+  margin-top: 5px;
   line-height: normal;
 }
 
@@ -397,7 +403,6 @@ button:hover {
 }
 
 /* INTERFACE EXTERNA */
-
 .aviso {
   width: 100%;
   text-align: center;

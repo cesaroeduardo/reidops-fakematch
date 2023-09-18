@@ -669,8 +669,9 @@ export default {
   background-color: white;
   color: black;
   border-radius: 2px;
-  font-family: "a-otf-ud-shin-maru-go-pr6n", sans-serif;
-  font-weight: 600;
+  font-family: 'PlayersName';
+  padding-top: 5px;
+  font-weight: 500;
   letter-spacing: -0.36px;
 }
 .status-input {
@@ -694,8 +695,9 @@ export default {
   background-color: white;
   color: black;
   border-radius: 2px;
-  font-family: "a-otf-ud-shin-maru-go-pr6n", sans-serif;
-  font-weight: 600;
+  padding-top: 5px;
+  font-family: 'PlayersName';
+  font-weight: 500;
   letter-spacing: -0.36px;
   z-index: 2;
 }
@@ -712,8 +714,8 @@ export default {
   color: black;
   margin-right: 30px;
   border-radius: 2px;
-  font-family: "a-otf-ud-shin-maru-go-pr6n", sans-serif;
-  font-weight: 700;
+  font-family: 'PlayersName';
+  font-weight: 500;
 }
 .score-input {
   width: 65px;
