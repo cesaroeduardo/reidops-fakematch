@@ -10,5 +10,10 @@ inject();
 </script>
 
 <template>
-  <Home></Home>
+  <main>
+    <Home/>
+  </main>
+  <footer>
+    <div class="credits">Made with 💜 and 😡 by <a href="https://twitter.com/reidophotoshops" target="_blank">ReiDoPhotoshops</a></div>
+  </footer>
 </template>

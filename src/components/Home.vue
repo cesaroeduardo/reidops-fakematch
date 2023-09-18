@@ -245,7 +245,6 @@
   <div class="instructions">
     <div class="aviso"><b>Click</b> to edit PlayerName, Pokémon, Level, Friend and Status. <b>Enter</b> to confirm.</div>
     <div class="shortcut">To take a capture <b>Win + Shift + S</b> on Windows or <b>Cmd + Shift + 4</b> on Mac</div>
-    <div class="credits">Made with love and hate by <a href="https://twitter.com/reidophotoshops" target="_blank">ReiDoPhotoshops</a></div>
   </div>
 </template>
 

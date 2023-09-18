@@ -303,22 +303,6 @@ body {
   margin-bottom: 10px;
 }
 
-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  font-weight: 800;
-  width: auto;
-  padding: 10px 15px;
-  margin-top: 10px;
-  border: none;
-  background-color: #673AB4;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 99px;
-}
 .score:hover {
   opacity: .6;
   cursor: pointer;
@@ -328,10 +312,6 @@ button {
   gap: 8px;
   justify-content: center;
   align-items: center;
-}
-
-button:hover {
-  background-color: #522e8f;
 }
 
 .tertiary-button {
@@ -422,16 +402,44 @@ button:hover {
   font-family: 'PT Sans';
   line-height: 20px;}
 .credits {
-  width: 100%;
   text-align: center;
-  color: #ffffff60;
+  color: #ffffff95;
+  background: #1a1919;
+  padding: 10px;
   font-size: 12px;
-  margin: 25px auto 45px auto;
+  margin: 35px auto 0px auto;
   font-family: 'PT Sans';
+}
+.credits a {
+  color: #ffffff90;
+}
+.credits a:visited {
+  color: #ffffff90;
 }
 .actions {
   width: 100%;
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: auto;
+  padding: 10px 15px 8px 15px;
+  margin-top: 10px;
+  border: none;
+  background-color: #673AB4;
+  color: #fff;
+  font-size: 12px;
+  font-family: 'PlayersName';
+  font-weight: 500;
+  cursor: pointer;
+  line-height: 10px;
+  border-radius: 99px;
+}
+button:hover {
+  background-color: #522e8f;
 }
