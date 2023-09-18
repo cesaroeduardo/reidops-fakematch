@@ -260,8 +260,8 @@ export default {
   },
   data() {
     return {
-      purpleScore: 360,
-      orangeScore: 0,
+      purpleScore: 584,
+      orangeScore: 168,
       editingOrangeScore: false,
       editingPurpleScore: false,
       purpleTeam: [
