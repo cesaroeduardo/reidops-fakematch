@@ -642,7 +642,7 @@ export default {
 
       // Atribua a cor com base na condição
       return {
-        color: isLastPurplePlayer ? '#edcf81' : '#EFE2FF',
+        color: isLastPurplePlayer ? '#edcf81' : 'rgba(255, 255, 255, .87)',
         // Outros estilos...
       };
     },
