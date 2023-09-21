@@ -3,9 +3,9 @@
     <!-- Purple Team -->
     <div class="purple-team">
       <div class="result-bar">
-        <img src="../assets/victorious.png">
+        <img src="/assets/images/victorious.png">
         <div class="purple-score">
-          <img src="../assets/question-ico.png">
+          <img src="/assets/images/question-ico.png">
           <span @click="editPurpleScore" class="score" v-if="!editingPurpleScore">{{ purpleScore }}</span>
           <input
             v-else
@@ -25,7 +25,7 @@
             <img
               class="add-button"
               :class="{ 'last-purple-player': isLastItem(player) && player.type === 'purple' }"
-              :src="player.isFriendAdded ? '/assets/buttons/added-friend.svg' : '/assets/buttons/add-friend.svg'"
+              :src="player.isFriendAdded ? '/assets/images/added-friend.svg' : '/assets/images/add-friend.svg'"
               width="37"
               height="37"
               alt="Pokémon Image"
@@ -124,7 +124,7 @@
     <!-- Orange Team -->
     <div class="orange-team">
       <div class="result-bar">
-        <img src="../assets/surrendered.png">
+        <img src="/assets/images/surrendered.png">
         <span @click="editOrangeScore" class="score" v-if="!editingOrangeScore">{{ orangeScore }}</span>
         <input
           v-else
@@ -142,7 +142,7 @@
           <div v-for="player in orangeTeam" :key="player.name" class="player-add">
             <img
               class="add-button"
-              :src="player.isFriendAdded ? '/assets/buttons/added-friend.svg' : '/assets/buttons/add-friend.svg'"
+              :src="player.isFriendAdded ? '/assets/images/added-friend.svg' : '/assets/images/add-friend.svg'"
               width="37"
               height="37"
               alt="Pokémon Image"
@@ -237,10 +237,9 @@
         </div>
       </div>
     </div>
-    <!-- <img src="../assets/buttons.png" class="buttons-image"> -->
   </div>
   <div class="actions">
-    <button @click="generateRandomNames" class="button-style"><img src="../assets/random-ico.svg">Randomize Nicknames</button>
+    <button @click="generateRandomNames" class="button-style"><img src="/assets/images/random-ico.svg">Randomize Nicknames</button>
   </div>
   <div class="instructions">
     <div class="aviso"><b>Click</b> to edit PlayerName, Pokémon, Level, Friend and Status. <b>Enter</b> to confirm.</div>

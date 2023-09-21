@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'PlayersName';
-  src: url('../assets/players-name-font.ttf') format('truetype');
+  src: url('/assets/font/players-name-font.ttf') format('truetype');
 }
 
 body {
@@ -17,7 +17,7 @@ body {
   flex-direction: row;
   width: 1061px;
   height: 741px;
-  background: url(../assets/background.jpg);
+  background: url(/assets/images/background.jpg);
   background-repeat: no-repeat;
   background-size: 1061px 741px;
   margin: 44px auto 20px auto;
@@ -28,7 +28,7 @@ body {
 }
 .orange-team .playerListStyle {
   background: #B4642A;
-  background-image: url(../assets/card-pattern.svg);
+  background-image: url(assets/images/card-pattern.svg);
   background-repeat: no-repeat;
 }
 
@@ -193,7 +193,7 @@ body {
   align-items: flex-start;
   flex-shrink: 0;
   border-radius: 6px;
-  background-image: url(../assets/card-pattern.svg);
+  background-image: url(/assets/images/card-pattern.svg);
   background-repeat: no-repeat;
 }
 
