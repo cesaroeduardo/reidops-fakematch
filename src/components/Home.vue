@@ -408,7 +408,7 @@ export default {
         { name: 'Mew', image: '/assets/pokemons/Mew.png' },
         { name: 'Mewtwo X', image: '/assets/pokemons/MewtwoX.png' },
         { name: 'Mewtwo Y', image: '/assets/pokemons/MewtwoY.png' },
-        { name: 'Mr. Mime', image: '/assets/pokemons/Mr_Mime.png' },
+        { name: 'Mr. Mime', image: '/assets/pokemons/MrMime.png' },
         { name: 'Pikachu', image: '/assets/pokemons/Pikachu.png' },
         { name: 'Sableye', image: '/assets/pokemons/Sableye.png' },
         { name: 'Scizor', image: '/assets/pokemons/Scizor.png' },
