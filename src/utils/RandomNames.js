@@ -73,6 +73,4 @@ export const playerNames = [
   "GAMERS ESPORT",
   "Crystal",
   "Kaoz"
-];
-
-// Sinta-se à vontade para adicionar mais nomes a esta lista, se desejar.
+]

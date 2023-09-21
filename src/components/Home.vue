@@ -53,7 +53,7 @@
                     height="50"
                   />
                   <select v-model="player.selectedPokemon" @change="changePokemon(player)" v-if="player.isSelectOpen" class="select-pokemon">
-                    <option v-for="pokemon in availablePokemon" :key="pokemon.name" :value="pokemon.name">
+                    <option v-for="pokemon in availablePokemons" :key="pokemon.name" :value="pokemon.name">
                       {{ pokemon.name }}
                     </option>
                   </select>
@@ -170,7 +170,7 @@
                     height="50"
                   />
                   <select v-model="player.selectedPokemon" @change="changePokemon(player)" v-if="player.isSelectOpen" class="select-pokemon">
-                    <option v-for="pokemon in availablePokemon" :key="pokemon.name" :value="pokemon.name">
+                    <option v-for="pokemon in availablePokemons" :key="pokemon.name" :value="pokemon.name">
                       {{ pokemon.name }}
                     </option>
                   </select>
@@ -251,6 +251,7 @@
 <script>
 import PlayerStatus from '../components/PlayerStatus.vue';
 import { playerNames } from '../utils/RandomNames.js';
+import { availablePokemons } from '../utils/PokemonList.js';
 
 export default {
   name: "Home",
@@ -259,6 +260,7 @@ export default {
   },
   data() {
     return {
+      availablePokemons: availablePokemons,
       purpleScore: 584,
       orangeScore: 168,
       editingOrangeScore: false,
@@ -368,65 +370,6 @@ export default {
         },
       ],
       isSelectOpen: false, // Variável para rastrear se o select está aberto
-      availablePokemon: [
-        { name: 'Absol', image: '/assets/pokemons/Absol.png' },
-        { name: 'Aegislash', image: '/assets/pokemons/Aegislash.png' },
-        { name: 'Alolan Ninetales', image: '/assets/pokemons/AlolanNinetales.png' },
-        { name: 'Azumarill', image: '/assets/pokemons/Azumarill.png' },
-        { name: 'Blastoise', image: '/assets/pokemons/Blastoise.png' },
-        { name: 'Blaziken', image: '/assets/pokemons/Blaziken.png' },
-        { name: 'Blissey', image: '/assets/pokemons/Blissey.png' },
-        { name: 'Buzzwole', image: '/assets/pokemons/Buzzwole.png' },
-        { name: 'Chandelure', image: '/assets/pokemons/Chandelure.png' },
-        { name: 'Charizard', image: '/assets/pokemons/Charizard.png' },
-        { name: 'Cinderace', image: '/assets/pokemons/Cinderace.png' },
-        { name: 'Clefable', image: '/assets/pokemons/Clefable.png' },
-        { name: 'Comfey', image: '/assets/pokemons/Comfey.png' },
-        { name: 'Cramorant', image: '/assets/pokemons/Cramorant.png' },
-        { name: 'Crustle', image: '/assets/pokemons/Crustle.png' },
-        { name: 'Decidueye', image: '/assets/pokemons/Decidueye.png' },
-        { name: 'Delphox', image: '/assets/pokemons/Delphox.png' },
-        { name: 'Dodrio', image: '/assets/pokemons/Dodrio.png' },
-        { name: 'Dragapult', image: '/assets/pokemons/Dragapult.png' },
-        { name: 'Dragonite', image: '/assets/pokemons/Dragonite.png' },
-        { name: 'Duraludon', image: '/assets/pokemons/Duraludon.png' },
-        { name: 'Eldegoss', image: '/assets/pokemons/Eldegoss.png' },
-        { name: 'Espeon', image: '/assets/pokemons/Espeon.png' },
-        { name: 'Garchomp', image: '/assets/pokemons/Garchomp.png' },
-        { name: 'Gardevoir', image: '/assets/pokemons/Gardevoir.png' },
-        { name: 'Gengar', image: '/assets/pokemons/Gengar.png' },
-        { name: 'Glaceon', image: '/assets/pokemons/Glaceon.png' },
-        { name: 'Goodra', image: '/assets/pokemons/Goodra.png' },
-        { name: 'Greedent', image: '/assets/pokemons/Greedent.png' },
-        { name: 'Greninja', image: '/assets/pokemons/Greninja.png' },
-        { name: 'Hoopa', image: '/assets/pokemons/Hoopa.png' },
-        { name: 'Inteleon', image: '/assets/pokemons/Inteleon.png' },
-        { name: 'Lapras', image: '/assets/pokemons/Lapras.png' },
-        { name: 'Lucario', image: '/assets/pokemons/Lucario.png' },
-        { name: 'Machamp', image: '/assets/pokemons/Machamp.png' },
-        { name: 'Mamoswine', image: '/assets/pokemons/Mamoswine.png' },
-        { name: 'Mew', image: '/assets/pokemons/Mew.png' },
-        { name: 'Mewtwo X', image: '/assets/pokemons/MewtwoX.png' },
-        { name: 'Mewtwo Y', image: '/assets/pokemons/MewtwoY.png' },
-        { name: 'Mr. Mime', image: '/assets/pokemons/MrMime.png' },
-        { name: 'Pikachu', image: '/assets/pokemons/Pikachu.png' },
-        { name: 'Sableye', image: '/assets/pokemons/Sableye.png' },
-        { name: 'Scizor', image: '/assets/pokemons/Scizor.png' },
-        { name: 'Slowbro', image: '/assets/pokemons/Slowbro.png' },
-        { name: 'Snorlax', image: '/assets/pokemons/Snorlax.png' },
-        { name: 'Sylveon', image: '/assets/pokemons/Sylveon.png' },
-        { name: 'Talonflame', image: '/assets/pokemons/Talonflame.png' },
-        { name: 'Trevenant', image: '/assets/pokemons/Trevenant.png' },
-        { name: 'Tsareena', image: '/assets/pokemons/Tsareena.png' },
-        { name: 'Tyranitar', image: '/assets/pokemons/Tyranitar.png' },
-        { name: 'Umbreon', image: '/assets/pokemons/Umbreon.png' },
-        { name: 'Urshifu', image: '/assets/pokemons/Urshifu.png' },
-        { name: 'Venusaur', image: '/assets/pokemons/Venusaur.png' },
-        { name: 'Wigglytuff', image: '/assets/pokemons/Wigglytuff.png' },
-        { name: 'Zacian', image: '/assets/pokemons/Zacian.png' },
-        { name: 'Zeraora', image: '/assets/pokemons/Zeraora.png' },
-        { name: 'Zoroark', image: '/assets/pokemons/Zoroark.png' },
-      ],
     };
   },
   computed: {
@@ -533,7 +476,7 @@ export default {
     // Método para atualizar o Pokémon quando o usuário selecionar um novo
     changePokemon(player) {
       // Encontre o objeto Pokémon correspondente com base no nome selecionado
-      const selectedPokemon = this.availablePokemon.find((pokemon) => pokemon.name === player.selectedPokemon);
+      const selectedPokemon = this.availablePokemons.find((pokemon) => pokemon.name === player.selectedPokemon);
 
       // Atualize a imagem do jogador
       player.image = selectedPokemon.image;
