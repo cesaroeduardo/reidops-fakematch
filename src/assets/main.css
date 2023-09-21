@@ -28,7 +28,7 @@ body {
 }
 .orange-team .playerListStyle {
   background: #B4642A;
-  background-image: url(assets/images/card-pattern.svg);
+  background-image: url(/assets/images/card-pattern.svg);
   background-repeat: no-repeat;
 }
 
