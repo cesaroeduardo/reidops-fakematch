@@ -3,7 +3,11 @@
     <!-- Purple Team -->
     <div class="purple-team">
       <div class="result-bar">
-        <img src="/assets/images/victorious.png">
+        <img
+          :src="showPurpleDefeatImage ? resultImages.purple.defeat : (showPurpleSurrenderImage ? resultImages.purple.surrender : resultImages.purple.victorious)"
+          class="isHover"
+          @click="toggleResultImage('purple')"
+        >
         <div class="purple-score">
           <img src="/assets/images/question-ico.png">
           <span @click="editPurpleScore" class="score" v-if="!editingPurpleScore">{{ purpleScore }}</span>
@@ -124,7 +128,11 @@
     <!-- Orange Team -->
     <div class="orange-team">
       <div class="result-bar">
-        <img src="/assets/images/surrendered.png">
+        <img
+          :src="showOrangeDefeatImage ? resultImages.orange.defeat : (showOrangeSurrenderImage ? resultImages.orange.surrender : resultImages.orange.victorious)"
+          class="isHover"
+          @click="toggleResultImage('orange')"
+        >
         <span @click="editOrangeScore" class="score" v-if="!editingOrangeScore">{{ orangeScore }}</span>
         <input
           v-else
@@ -264,6 +272,18 @@ export default {
       orangeScore: 168,
       editingOrangeScore: false,
       editingPurpleScore: false,
+      resultImages: {
+        purple: {
+          defeat: '/assets/images/purple_defeat.png',
+          surrender: '/assets/images/purple_surrendered.png',
+          victorious: '/assets/images/purple_victorious.png',
+        },
+        orange: {
+          defeat: '/assets/images/orange_defeat.png',
+          surrender: '/assets/images/orange_surrendered.png',
+          victorious: '/assets/images/orange_victorious.png',
+        },
+      },
       purpleTeam: [
         {
           name: "Medot",
@@ -407,6 +427,8 @@ export default {
     },
   },
   watch: {
+    purpleScore: "toggleDefeatImage",
+    orangeScore: "toggleDefeatImage",
     'player.totalDamageDealt': {
       handler(newDamageDealt, oldDamageDealt) {
         // Calcula a nova porcentagem quando totalDamageDealt muda
@@ -416,6 +438,42 @@ export default {
     },
   },
   methods: {
+
+    // Metodo de verificar time vencedor
+    toggleDefeatImage() {
+      const purpleScore = parseInt(this.purpleScore);
+      const orangeScore = parseInt(this.orangeScore);
+
+      // Verifique se alguma equipe se rendeu
+      if (this.purpleSurrendered || this.orangeSurrendered) {
+        this.showPurpleDefeatImage = this.purpleSurrendered;
+        this.showOrangeDefeatImage = this.orangeSurrendered;
+      } else {
+        // Verifique qual time é o vencedor com base nas pontuações
+        if (purpleScore > orangeScore) {
+          this.showPurpleDefeatImage = false;
+          this.showOrangeDefeatImage = true;
+        } else if (orangeScore > purpleScore) {
+          this.showPurpleDefeatImage = true;
+          this.showOrangeDefeatImage = false;
+        } else {
+          // Em caso de empate, o time Purple vence
+          this.showPurpleDefeatImage = false;
+          this.showOrangeDefeatImage = true;
+        }
+      }
+    },
+
+    // Método para alternar entre defeat e surrender
+    toggleSurrenderImage(team) {
+      if (team === 'purple') {
+        this.purpleSurrendered = !this.purpleSurrendered;
+      } else if (team === 'orange') {
+        this.orangeSurrendered = !this.orangeSurrendered;
+      }
+      this.toggleDefeatImage();
+    },
+
     // Metodo para alteração de amizade
     toggleFriendStatus(player) {
       player.isFriendAdded = !player.isFriendAdded;
@@ -589,6 +647,15 @@ export default {
     },
   },
   created() {
+    // Inicialize showOrangeDefeatImage como true para que a equipe Orange comece com a imagem de derrota
+    this.showOrangeDefeatImage = true;
+
+    // Chamada para calcular as porcentagens para o time roxo
+    this.calculatePercentages(this.purpleTeam);
+
+    // Chamada para calcular as porcentagens para o time laranja
+    this.calculatePercentages(this.orangeTeam);
+
     // Chamada para calcular as porcentagens para o time roxo
     this.calculatePercentages(this.purpleTeam);
     

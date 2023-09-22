@@ -210,6 +210,13 @@ body {
   z-index: 0;
   cursor: pointer;
 }
+.isHover {
+  opacity: 1;
+  cursor: pointer;
+}
+.isHover:hover {
+  opacity: .4;
+}
 
 .player-name:hover {
   opacity: .6;
