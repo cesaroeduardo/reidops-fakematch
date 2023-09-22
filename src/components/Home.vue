@@ -5,8 +5,6 @@
       <div class="result-bar">
         <img
           :src="showPurpleDefeatImage ? resultImages.purple.defeat : (showPurpleSurrenderImage ? resultImages.purple.surrender : resultImages.purple.victorious)"
-          class="isHover"
-          @click="toggleResultImage('purple')"
         >
         <div class="purple-score">
           <img src="/assets/images/question-ico.png">
@@ -130,8 +128,6 @@
       <div class="result-bar">
         <img
           :src="showOrangeDefeatImage ? resultImages.orange.defeat : (showOrangeSurrenderImage ? resultImages.orange.surrender : resultImages.orange.victorious)"
-          class="isHover"
-          @click="toggleResultImage('orange')"
         >
         <span @click="editOrangeScore" class="score" v-if="!editingOrangeScore">{{ orangeScore }}</span>
         <input
