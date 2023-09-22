@@ -4,7 +4,8 @@
     <div class="purple-team">
       <div class="result-bar">
         <img
-          :src="showPurpleDefeatImage ? resultImages.purple.defeat : (showPurpleSurrenderImage ? resultImages.purple.surrender : resultImages.purple.victorious)"
+          @click="toggleSurrendered('purple')"
+          :src="showPurpleDefeatImage ? resultImages.purple.defeat : (showPurpleSurrenderedImage ? resultImages.purple.surrendered : resultImages.purple.victorious)"
         >
         <div class="purple-score">
           <img src="/assets/images/question-ico.png">
@@ -127,7 +128,8 @@
     <div class="orange-team">
       <div class="result-bar">
         <img
-          :src="showOrangeDefeatImage ? resultImages.orange.defeat : (showOrangeSurrenderImage ? resultImages.orange.surrender : resultImages.orange.victorious)"
+          @click="toggleSurrendered('orange')"
+          :src="showOrangeDefeatImage ? resultImages.orange.defeat : (showOrangeSurrenderedImage ? resultImages.orange.surrendered : resultImages.orange.victorious)"
         >
         <span @click="editOrangeScore" class="score" v-if="!editingOrangeScore">{{ orangeScore }}</span>
         <input
@@ -271,12 +273,12 @@ export default {
       resultImages: {
         purple: {
           defeat: '/assets/images/purple_defeat.png',
-          surrender: '/assets/images/purple_surrendered.png',
+          surrendered: '/assets/images/purple_surrendered.png',
           victorious: '/assets/images/purple_victorious.png',
         },
         orange: {
           defeat: '/assets/images/orange_defeat.png',
-          surrender: '/assets/images/orange_surrendered.png',
+          surrendered: '/assets/images/orange_surrendered.png',
           victorious: '/assets/images/orange_victorious.png',
         },
       },
@@ -460,14 +462,14 @@ export default {
       }
     },
 
-    // Método para alternar entre defeat e surrender
-    toggleSurrenderImage(team) {
+    // Método para alternar entre defeat e surrendered
+    toggleSurrendered(team) {
       if (team === 'purple') {
         this.purpleSurrendered = !this.purpleSurrendered;
       } else if (team === 'orange') {
         this.orangeSurrendered = !this.orangeSurrendered;
       }
-      this.toggleDefeatImage();
+      this.toggleDefeatImage(); // Atualize a imagem com base no novo estado de rendição
     },
 
     // Metodo para alteração de amizade

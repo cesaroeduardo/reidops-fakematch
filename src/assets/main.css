@@ -409,13 +409,29 @@ body {
   font-family: 'PT Sans';
   line-height: 20px;}
 .credits {
-  text-align: center;
   color: #ffffff95;
   background: #1a1919;
   padding: 10px;
-  font-size: 12px;
   margin: 35px auto 0px auto;
+  padding: 25px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.credits div {
+  width: 1060px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.credits p {
+  font-size: 12px;
+  text-align: center;
   font-family: 'PT Sans';
+  margin: 5px 0;
 }
 .credits a {
   color: #ffffff90;
@@ -449,4 +465,22 @@ button {
 }
 button:hover {
   background-color: #522e8f;
+}
+
+
+
+/* Responsive */
+
+@media screen and (max-width: 1061px) { 
+  button {
+    width: 100%;
+  }
+  .credits div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .credits p {
+    text-align: center;
+  }
 }

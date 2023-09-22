@@ -13,7 +13,16 @@ inject();
   <main>
     <Home/>
   </main>
-  <footer>
-    <div class="credits">Made with 💜 and 😡 by <a href="https://twitter.com/reidophotoshops" target="_blank">ReiDoPhotoshops</a></div>
+  <footer class="credits">
+    <div>
+      <p style="max-width: 600px;">
+        ReiDoPS Fakematch isn’t endorsed by Nintendo and doesn’t reflect the views or opinions of Nintendo or 
+        anyone officially involved in producing or managing Pokémon Unite. Pokémon Unite and Pokémon are 
+        trademarks or registered trademarks of Nintendo.
+      </p>
+      <p>
+        Made with 💜 and 😡 by <a href="https://twitter.com/reidophotoshops" target="_blank">ReiDoPhotoshops</a>
+      </p>
+    </div>
   </footer>
 </template>
