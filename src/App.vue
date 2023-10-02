@@ -16,10 +16,10 @@ inject();
   <footer class="credits">
     <div>
       <p style="max-width: 600px;">
+        All assets, images and texts are owned by © 2023 Pokémon. ©1995–2023 Nintendo Creatures Inc. / GAME FREAK inc. © 2023 Tencent. All rights reserved.
         ReiDoPS Fakematch isn’t endorsed by Nintendo and doesn’t reflect the views or opinions of Nintendo or 
         anyone officially involved in producing or managing Pokémon Unite. Pokémon Unite and Pokémon are 
-        trademarks or registered trademarks of Nintendo.
-      </p>
+        trademarks or registered trademarks of Nintendo.</p>
       <p>
         Made with 💜 and 😡 by <a href="https://twitter.com/reidophotoshops" target="_blank">ReiDoPhotoshops</a>
       </p>
