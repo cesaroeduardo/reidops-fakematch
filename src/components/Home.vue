@@ -324,7 +324,7 @@ export default {
           isFriendAdded: true
         },
         {
-          name: "ttvDudaUnite",
+          name: "ttvReiDoPS",
           level: 15,
           image: "/assets/pokemons/Scizor.png",
           type: 'purple', // Added type property to distinguish team
