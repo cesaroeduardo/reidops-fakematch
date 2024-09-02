@@ -21,7 +21,7 @@ inject();
         anyone officially involved in producing or managing Pokémon Unite. Pokémon Unite and Pokémon are 
         trademarks or registered trademarks of Nintendo.</p>
       <p>
-        Made with 💜 by <a href="https://twitter.com/dudaunite" target="_blank">DudaUnite</a>
+        Made with 💜 by <a href="https://reidophotoshops.com/" target="_blank">@reidophotoshops</a>
       </p>
     </div>
   </footer>
