@@ -7,6 +7,7 @@ export const availablePokemons = [
     { name: 'Blaziken', image: '/assets/pokemons/Blaziken.png' },
     { name: 'Blissey', image: '/assets/pokemons/Blissey.png' },
     { name: 'Buzzwole', image: '/assets/pokemons/Buzzwole.png' },
+    { name: 'Ceruledge', image: '/assets/pokemons/Ceruledge.png' },
     { name: 'Chandelure', image: '/assets/pokemons/Chandelure.png' },
     { name: 'Charizard', image: '/assets/pokemons/Charizard.png' },
     { name: 'Cinderace', image: '/assets/pokemons/Cinderace.png' },
